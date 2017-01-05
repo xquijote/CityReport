@@ -1,0 +1,28 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-dark">
+        <h1 class="title">Reportar incidente</h1>
+        <div class="buttons">
+            <button class="button" ng-click="closeModal()">Cancelar</button>
+        </div>
+    </ion-header-bar>
+    <ion-content padding="true">
+        <!--<h2>Submit Report</h2>-->
+        <h3 style="font-weight: 300; font-size: 14pt; color: gray; margin-left: 5%; margin-right: 5%; margin-top: 5%">Incluir un incidente en CityReport es muy simple. Introduce una pequeña descripción y saca una foto. Luego postear!! </h3>
+        <p style="color: gray; margin-left: 5%; margin-right: 5%;">Automáticamente tomamos tu ubicación y lo posteamos!!.</p>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Descripción</span>
+            <input ng-model="problem.description" type="text" placeholder="Escribe en 5 a 10 palabras tu incidente.">
+        </label>
+        <div style="margin-left: auto; margin-right: auto; text-align: center; margin-top: 25px">
+             <button class="button icon-left ion-camera button-stable" ng-click="capture()">
+              Toma una foto
+            </button>
+            
+            <button class="button button-positive" ng-click="submitPost()">
+              Postear incidente
+            </button>
+        </div>
+        
+        <img id="preview-image" style="width: 100%; margin-left: auto; margin-right: auto; text-align: center; margin-top: 5%">
+    </ion-content>
+</ion-modal-view>
